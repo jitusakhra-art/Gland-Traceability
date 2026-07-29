@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Metal Mech Engineering - ASN Details</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f4f7;
+    color: #222;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+}
+
+/* HEADER */
+
+.header {
+    background: #1f4e78;
+    color: white;
+    text-align: center;
+    padding: 22px 15px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+.header p {
+    margin: 7px 0 0;
+    font-size: 15px;
+}
+
+/* TITLE */
+
+.section-title {
+    background: #d9eaf7;
+    color: #111;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
+    border-bottom: 2px solid #1f4e78;
+}
+
+/* TOP DETAILS */
+
+.top-details {
+    padding: 18px;
+}
+
+.info-row {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    padding: 11px 5px;
+}
+
+.label {
+    width: 35%;
+    font-weight: bold;
+    color: #444;
+}
+
+.value {
+    width: 65%;
+    font-weight: 600;
+    word-break: break-word;
+}
+
+/* TABLE */
+
+.table-wrap {
+    width: 100%;
+    padding: 0 18px 20px 18px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #d9eaf7;
+    color: #111;
+    padding: 11px 8px;
+    border: 1px solid #bbb;
+    text-align: center;
+}
+
+td {
+    padding: 10px 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+td.item-name {
+    text-align: left;
+}
+
+/* MTC LINK */
+
+a.mtc-link {
+    color: #0563c1;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    padding: 16px;
+    background: #f5f5f5;
+    font-size: 13px;
+    color: #666;
+}
+
+
+/* =====================================================
+   MOBILE VIEW
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 8px;
+    }
+
+    .container {
+        margin: 5px auto;
+        border-radius: 8px;
+    }
+
+    .header {
+        padding: 18px 10px;
+    }
+
+    .header h1 {
+        font-size: 21px;
+    }
+
+    .header p {
+        font-size: 13px;
+    }
+
+    .section-title {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+
+    /* TOP ASN DETAILS */
+
+    .top-details {
+        padding: 12px;
+    }
+
+    .info-row {
+        display: block;
+        padding: 9px 2px;
+    }
+
+    .label {
+        width: 100%;
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 4px;
+    }
+
+    .value {
+        width: 100%;
+        font-size: 15px;
+        color: #111;
+    }
+
+
+    /* TABLE -> MOBILE CARDS */
+
+    .table-wrap {
+        padding: 5px 10px 15px 10px;
+    }
+
+    table,
+    tbody {
+        display: block;
+        width: 100%;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+        border: 1px solid #c9d6e2;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    td {
+        display: flex;
+        width: 100%;
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid #eee;
+        padding: 9px 10px;
+        font-size: 14px;
+        word-break: break-word;
+    }
+
+    td:last-child {
+        border-bottom: none;
+    }
+
+    td::before {
+        width: 42%;
+        flex-shrink: 0;
+        font-weight: bold;
+        color: #555;
+        padding-right: 8px;
+    }
+
+    td:nth-child(1)::before {
+        content: "Travel Card";
+    }
+
+    td:nth-child(2)::before {
+        content: "Item Name";
+    }
+
+    td:nth-child(3)::before {
+        content: "MTC No";
+    }
+
+    td:nth-child(4)::before {
+        content: "Heat No";
+    }
+
+    td:nth-child(5)::before {
+        content: "CMN No";
+    }
+
+    td:nth-child(6)::before {
+        content: "RMN No";
+    }
+
+    td.item-name {
+        text-align: left;
+    }
+
+    .footer {
+        font-size: 12px;
+        padding: 14px 8px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>Metal Mech Engineering</h1>
+        <p>Material Traceability Details / Documents</p>
+    </div>
+
+    <div class="section-title">
+        ASN-Details
+    </div>
+
+
+    <div class="top-details">
+
+        <div class="info-row">
+            <div class="label">Assembly No</div>
+            <div class="value">AEX260604-03</div>
+        </div>
+
+        <div class="info-row">
+            <div class="label">Gland Code</div>
+            <div class="value">MM EX E1WB 03</div>
+        </div>
+
+        <div class="info-row">
+            <div class="label">Work Order No</div>
+            <div class="value">25000647</div>
+        </div>
+
+    </div>
+
+
+    <div class="table-wrap">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Travel Card No</th>
+                    <th>Item Name</th>
+                    <th>MTC No</th>
+                    <th>Heat No</th>
+                    <th>CMN No</th>
+                    <th>RMN No</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+<td>T-1043</td>
+<td class="item-name">MM EX 414002-03 MIDDLE NUT</td>
+<td><a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-114-2.pdf" target="_blank" download>114</a></td>
+<td>2</td>
+<td>C26051401-06</td>
+<td>R260430-03</td>
+</tr>
+<tr>
+<td>T-1086</td>
+<td class="item-name">MM EX 313003-03 BACK NUT</td>
+<td><a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-219-4.pdf" target="_blank" download>219</a></td>
+<td>4</td>
+<td>C26060301-02</td>
+<td>R260517-04</td>
+</tr>
+<tr>
+<td>T-1042</td>
+<td class="item-name">MM EX 414005-03 CONE</td>
+<td><a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-114-2.pdf" target="_blank" download>114</a></td>
+<td>2</td>
+<td>C26051301-01</td>
+<td>R260430-02</td>
+</tr>
+<tr>
+<td>T-1044</td>
+<td class="item-name">MM EX 413001M-03 ENTRY COMPONENT</td>
+<td><a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-114-2.pdf" target="_blank" download>114</a></td>
+<td>2</td>
+<td>C26051601-02</td>
+<td>R260430-04</td>
+</tr>
+<tr>
+<td>T-1054</td>
+<td class="item-name">MM EX 414004-03 RING</td>
+<td><a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-114-2.pdf" target="_blank" download>114</a></td>
+<td>2</td>
+<td>C26051101-01</td>
+<td>R260430-14</td>
+</tr>
+<tr>
+<td>T-1052</td>
+<td class="item-name">MM EX 413000-03 SEALING TUBE</td>
+<td><a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-114-2.pdf" target="_blank" download>114</a></td>
+<td>2</td>
+<td>C26051401-01</td>
+<td>R260430-12</td>
+</tr>
+
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <div class="footer">
+        Metal Mech Engineering<br>
+        Material Traceability System
+    </div>
+
+</div>
+
+</body>
+</html>
