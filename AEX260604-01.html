@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Metal Mech Engineering - ASN Details</title>
@@ -30,7 +33,10 @@ body {
     box-shadow: 0 4px 18px rgba(0,0,0,0.15);
 }
 
-/* HEADER */
+
+/* ================================
+   HEADER
+   ================================ */
 
 .header {
     background: #1f4e78;
@@ -49,7 +55,10 @@ body {
     font-size: 14px;
 }
 
-/* TITLE */
+
+/* ================================
+   TITLE
+   ================================ */
 
 .section-title {
     background: #d9eaf7;
@@ -61,7 +70,10 @@ body {
     border-bottom: 2px solid #1f4e78;
 }
 
-/* TOP DETAILS */
+
+/* ================================
+   TOP DETAILS
+   ================================ */
 
 .top-details {
     padding: 10px 14px;
@@ -85,7 +97,10 @@ body {
     word-break: break-word;
 }
 
-/* TABLE */
+
+/* ================================
+   TABLE
+   ================================ */
 
 .table-wrap {
     width: 100%;
@@ -121,7 +136,10 @@ td.item-name {
     text-align: left;
 }
 
-/* COLUMN WIDTHS */
+
+/* ================================
+   COLUMN WIDTHS
+   ================================ */
 
 th:nth-child(1),
 td:nth-child(1) {
@@ -153,7 +171,10 @@ td:nth-child(6) {
     width: 19%;
 }
 
-/* MTC NUMBER LINK */
+
+/* ================================
+   MTC LINK
+   ================================ */
 
 a.mtc-link {
     color: #0563c1;
@@ -166,7 +187,10 @@ a.mtc-link:hover {
     color: #003f7f;
 }
 
-/* FOOTER */
+
+/* ================================
+   FOOTER
+   ================================ */
 
 .footer {
     text-align: center;
@@ -176,7 +200,12 @@ a.mtc-link:hover {
     color: #666;
 }
 
-/* MOBILE - SAME LANDSCAPE TABLE */
+
+/* ==================================================
+   MOBILE - SAME LANDSCAPE TABLE
+   NO CARD VIEW
+   NO HORIZONTAL SCROLL
+   ================================================== */
 
 @media (max-width: 600px) {
 
@@ -263,56 +292,136 @@ a.mtc-link:hover {
 }
 
 </style>
+
 </head>
+
 
 <body>
 
+
 <div class="container">
 
+
+    <!-- ================================
+         HEADER
+         ================================ -->
+
     <div class="header">
+
         <h1>Metal Mech Engineering</h1>
-        <p>Material Traceability Details / Documents</p>
+
+        <p>
+            Material Traceability Details / Documents
+        </p>
+
     </div>
 
+
+    <!-- ================================
+         ASN TITLE
+         ================================ -->
+
     <div class="section-title">
+
         ASN-Details
+
     </div>
+
+
+    <!-- ================================
+         ASN TOP DETAILS
+         ================================ -->
 
     <div class="top-details">
 
-        <div class="info-row">
-            <div class="label">Assembly No</div>
-            <div class="value">AEX260604-01</div>
-        </div>
 
         <div class="info-row">
-            <div class="label">Gland Code</div>
-            <div class="value">MM EX E1WB 00</div>
+
+            <div class="label">
+                Assembly No
+            </div>
+
+            <div class="value">
+                AEX260604-01
+            </div>
+
         </div>
 
+
         <div class="info-row">
-            <div class="label">Work Order No</div>
-            <div class="value">25000647</div>
+
+            <div class="label">
+                Gland Code
+            </div>
+
+            <div class="value">
+                MM EX E1WB 00
+            </div>
+
         </div>
+
+
+        <div class="info-row">
+
+            <div class="label">
+                Work Order No
+            </div>
+
+            <div class="value">
+                25000647
+            </div>
+
+        </div>
+
 
     </div>
 
+
+    <!-- ================================
+         MATERIAL TABLE
+         ================================ -->
+
     <div class="table-wrap">
+
 
         <table id="materialTable">
 
+
             <thead>
+
                 <tr>
-                    <th>Travel Card No</th>
-                    <th>Item Name</th>
-                    <th>MTC No</th>
-                    <th>Heat No</th>
-                    <th>CMN No</th>
-                    <th>RMN No</th>
+
+                    <th>
+                        Travel Card No
+                    </th>
+
+                    <th>
+                        Item Name
+                    </th>
+
+                    <th>
+                        MTC No
+                    </th>
+
+                    <th>
+                        Heat No
+                    </th>
+
+                    <th>
+                        CMN No
+                    </th>
+
+                    <th>
+                        RMN No
+                    </th>
+
                 </tr>
+
             </thead>
 
+
             <tbody>
+
                 <tr>
 <td>T-1056</td>
 <td class="item-name">MM EX 413001M-00 ENTRY COMPONENT</td>
@@ -362,97 +471,258 @@ a.mtc-link:hover {
 <td>R260429-03</td>
 </tr>
 
+
             </tbody>
+
 
         </table>
 
+
     </div>
 
+
+    <!-- ================================
+         FOOTER
+         ================================ -->
+
     <div class="footer">
-        Metal Mech Engineering<br>
+
+        Metal Mech Engineering
+
+        <br>
+
         Material Traceability System
+
     </div>
+
 
 </div>
 
 
+
+<!-- ==================================================
+     MTC PDF LINK SYSTEM
+
+     Example:
+
+     MTC No  = 103
+     Heat No = 2
+
+     PDF FILE:
+     MTC-103-2.pdf
+
+     MTC column will show ONLY:
+     103
+
+     Click 103 -> PDF opens
+     ================================================== -->
+
+
 <script>
-
-/*
-    MTC PDF LINK
-
-    Table columns:
-    0 = Travel Card No
-    1 = Item Name
-    2 = MTC No
-    3 = Heat No
-    4 = CMN No
-    5 = RMN No
-
-    Example:
-    MTC No  = 103
-    Heat No = 2
-
-    PDF:
-    MTC-103-2.pdf
-*/
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const table = document.getElementById("materialTable");
+
+    const table =
+        document.getElementById("materialTable");
+
 
     if (!table) {
         return;
     }
 
-    const rows = table.querySelectorAll("tbody tr");
+
+    const rows =
+        table.querySelectorAll("tbody tr");
+
 
     rows.forEach(function (row) {
 
-        const cells = row.querySelectorAll("td");
+
+        const cells =
+            row.querySelectorAll("td");
+
 
         if (cells.length < 6) {
             return;
         }
 
+
+        /* ================================
+           GET MTC CELL
+           ================================ */
+
         const mtcCell = cells[2];
+
+
+        /* ================================
+           GET HEAT CELL
+           ================================ */
+
         const heatCell = cells[3];
 
-        const mtcNo = mtcCell.textContent.trim();
-        const heatNo = heatCell.textContent.trim();
 
-        if (mtcNo === "" || heatNo === "") {
-            return;
+        /* ================================
+           READ MTC NUMBER
+
+           Existing cell may contain:
+
+           103
+           103View
+           103View | Download
+
+           We only need 103
+           ================================ */
+
+        const rawText =
+            mtcCell.textContent.trim();
+
+
+        let mtcNo = "";
+
+
+        /*
+        First try to read first number
+        from the MTC cell.
+        */
+
+        const numberMatch =
+            rawText.match(/\d+/);
+
+
+        if (numberMatch) {
+
+            mtcNo =
+                numberMatch[0];
+
         }
 
+
+        /* ================================
+           READ HEAT NUMBER
+           ================================ */
+
+        const heatNo =
+            heatCell.textContent.trim();
+
+
+        /* ================================
+           CHECK DATA
+           ================================ */
+
+        if (
+            mtcNo === "" ||
+            heatNo === ""
+        ) {
+
+            return;
+
+        }
+
+
+        /* ================================
+           CREATE PDF FILE NAME
+
+           Example:
+
+           MTC-103-2.pdf
+           ================================ */
+
         const pdfFile =
+
             "MTC-" +
+
             encodeURIComponent(mtcNo) +
+
             "-" +
+
             encodeURIComponent(heatNo) +
+
             ".pdf";
 
+
+        /* ================================
+           MTC PDF LOCATION
+           ================================ */
+
         const pdfURL =
+
             "https://jitusakhra-art.github.io/Traceability/" +
+
             pdfFile;
+
+
+        /* ================================
+           REMOVE OLD CONTENT
+
+           This removes:
+
+           View
+           Download
+           old links
+
+           EVERYTHING from MTC cell.
+           ================================ */
 
         mtcCell.innerHTML = "";
 
-        const link = document.createElement("a");
 
-        link.href = pdfURL;
-        link.target = "_blank";
-        link.rel = "noopener noreferrer";
-        link.className = "mtc-link";
-        link.textContent = mtcNo;
+        /* ================================
+           CREATE NEW MTC LINK
+           ================================ */
+
+        const link =
+            document.createElement("a");
+
+
+        link.href =
+            pdfURL;
+
+
+        /*
+        Open PDF in browser/new tab.
+        NO forced download.
+        */
+
+        link.target =
+            "_blank";
+
+
+        link.rel =
+            "noopener noreferrer";
+
+
+        link.className =
+            "mtc-link";
+
+
+        /*
+        Show ONLY MTC No.
+
+        Example:
+
+        103
+        */
+
+        link.textContent =
+            mtcNo;
+
+
+        /* ================================
+           ADD LINK TO MTC CELL
+           ================================ */
 
         mtcCell.appendChild(link);
 
+
     });
+
 
 });
 
 </script>
 
+
 </body>
+
 </html>
