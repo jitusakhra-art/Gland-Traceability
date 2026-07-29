@@ -7,6 +7,7 @@
 <title>Metal Mech Engineering - ASN Details</title>
 
 <style>
+
 * {
     box-sizing: border-box;
 }
@@ -29,6 +30,8 @@ body {
     box-shadow: 0 4px 18px rgba(0,0,0,0.15);
 }
 
+/* HEADER */
+
 .header {
     background: #1f4e78;
     color: white;
@@ -46,6 +49,8 @@ body {
     font-size: 15px;
 }
 
+/* TITLE */
+
 .section-title {
     background: #d9eaf7;
     color: #111;
@@ -55,6 +60,8 @@ body {
     padding: 12px;
     border-bottom: 2px solid #1f4e78;
 }
+
+/* TOP DETAILS */
 
 .top-details {
     padding: 18px;
@@ -78,16 +85,16 @@ body {
     word-break: break-word;
 }
 
+/* TABLE */
+
 .table-wrap {
     width: 100%;
-    overflow-x: auto;
     padding: 0 18px 20px 18px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 800px;
 }
 
 th {
@@ -108,11 +115,15 @@ td.item-name {
     text-align: left;
 }
 
+/* MTC LINK */
+
 a.mtc-link {
     color: #0563c1;
     font-weight: bold;
     text-decoration: underline;
 }
+
+/* FOOTER */
 
 .footer {
     text-align: center;
@@ -122,34 +133,151 @@ a.mtc-link {
     color: #666;
 }
 
+
+/* =====================================================
+   MOBILE VIEW
+   ===================================================== */
+
 @media (max-width: 600px) {
+
     body {
         padding: 8px;
     }
 
     .container {
-        margin: 8px auto;
+        margin: 5px auto;
+        border-radius: 8px;
+    }
+
+    .header {
+        padding: 18px 10px;
     }
 
     .header h1 {
-        font-size: 22px;
+        font-size: 21px;
+    }
+
+    .header p {
+        font-size: 13px;
+    }
+
+    .section-title {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+
+    /* TOP ASN DETAILS */
+
+    .top-details {
+        padding: 12px;
     }
 
     .info-row {
         display: block;
+        padding: 9px 2px;
     }
 
-    .label,
+    .label {
+        width: 100%;
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 4px;
+    }
+
     .value {
+        width: 100%;
+        font-size: 15px;
+        color: #111;
+    }
+
+
+    /* TABLE -> MOBILE CARDS */
+
+    .table-wrap {
+        padding: 5px 10px 15px 10px;
+    }
+
+    table,
+    tbody {
+        display: block;
         width: 100%;
     }
 
-    .value {
-        margin-top: 5px;
+    thead {
+        display: none;
     }
-}
-</style>
 
+    tr {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+        border: 1px solid #c9d6e2;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    td {
+        display: flex;
+        width: 100%;
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid #eee;
+        padding: 9px 10px;
+        font-size: 14px;
+        word-break: break-word;
+    }
+
+    td:last-child {
+        border-bottom: none;
+    }
+
+    td::before {
+        width: 42%;
+        flex-shrink: 0;
+        font-weight: bold;
+        color: #555;
+        padding-right: 8px;
+    }
+
+    td:nth-child(1)::before {
+        content: "Travel Card";
+    }
+
+    td:nth-child(2)::before {
+        content: "Item Name";
+    }
+
+    td:nth-child(3)::before {
+        content: "MTC No";
+    }
+
+    td:nth-child(4)::before {
+        content: "Heat No";
+    }
+
+    td:nth-child(5)::before {
+        content: "CMN No";
+    }
+
+    td:nth-child(6)::before {
+        content: "RMN No";
+    }
+
+    td.item-name {
+        text-align: left;
+    }
+
+    .footer {
+        font-size: 12px;
+        padding: 14px 8px;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
@@ -164,6 +292,7 @@ a.mtc-link {
     <div class="section-title">
         ASN-Details
     </div>
+
 
     <div class="top-details">
 
@@ -184,11 +313,13 @@ a.mtc-link {
 
     </div>
 
+
     <div class="table-wrap">
 
         <table>
 
             <thead>
+
                 <tr>
                     <th>Travel Card No</th>
                     <th>Item Name</th>
@@ -197,6 +328,7 @@ a.mtc-link {
                     <th>CMN No</th>
                     <th>RMN No</th>
                 </tr>
+
             </thead>
 
             <tbody>
@@ -256,6 +388,7 @@ a.mtc-link {
         </table>
 
     </div>
+
 
     <div class="footer">
         Metal Mech Engineering<br>
