@@ -176,11 +176,7 @@ a.mtc-link:hover {
     color: #666;
 }
 
-
-/* ==================================================
-   MOBILE - SAME LANDSCAPE TABLE
-   NO CARD VIEW / NO HORIZONTAL SCROLL
-   ================================================== */
+/* MOBILE - SAME LANDSCAPE TABLE */
 
 @media (max-width: 600px) {
 
@@ -303,7 +299,7 @@ a.mtc-link:hover {
 
     <div class="table-wrap">
 
-        <table>
+        <table id="materialTable">
 
             <thead>
                 <tr>
@@ -378,6 +374,85 @@ a.mtc-link:hover {
     </div>
 
 </div>
+
+
+<script>
+
+/*
+    MTC PDF LINK
+
+    Table columns:
+    0 = Travel Card No
+    1 = Item Name
+    2 = MTC No
+    3 = Heat No
+    4 = CMN No
+    5 = RMN No
+
+    Example:
+    MTC No  = 103
+    Heat No = 2
+
+    PDF:
+    MTC-103-2.pdf
+*/
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const table = document.getElementById("materialTable");
+
+    if (!table) {
+        return;
+    }
+
+    const rows = table.querySelectorAll("tbody tr");
+
+    rows.forEach(function (row) {
+
+        const cells = row.querySelectorAll("td");
+
+        if (cells.length < 6) {
+            return;
+        }
+
+        const mtcCell = cells[2];
+        const heatCell = cells[3];
+
+        const mtcNo = mtcCell.textContent.trim();
+        const heatNo = heatCell.textContent.trim();
+
+        if (mtcNo === "" || heatNo === "") {
+            return;
+        }
+
+        const pdfFile =
+            "MTC-" +
+            encodeURIComponent(mtcNo) +
+            "-" +
+            encodeURIComponent(heatNo) +
+            ".pdf";
+
+        const pdfURL =
+            "https://jitusakhra-art.github.io/Traceability/" +
+            pdfFile;
+
+        mtcCell.innerHTML = "";
+
+        const link = document.createElement("a");
+
+        link.href = pdfURL;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.className = "mtc-link";
+        link.textContent = mtcNo;
+
+        mtcCell.appendChild(link);
+
+    });
+
+});
+
+</script>
 
 </body>
 </html>
