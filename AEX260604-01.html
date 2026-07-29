@@ -14,7 +14,7 @@
 
 body {
     margin: 0;
-    padding: 20px;
+    padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
     background: #f2f4f7;
     color: #222;
@@ -22,10 +22,10 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1000px;
-    margin: 30px auto;
+    max-width: 1100px;
+    margin: 15px auto;
     background: #ffffff;
-    border-radius: 12px;
+    border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 18px rgba(0,0,0,0.15);
 }
@@ -36,17 +36,17 @@ body {
     background: #1f4e78;
     color: white;
     text-align: center;
-    padding: 22px 15px;
+    padding: 16px 10px;
 }
 
 .header h1 {
     margin: 0;
-    font-size: 26px;
+    font-size: 24px;
 }
 
 .header p {
-    margin: 7px 0 0;
-    font-size: 15px;
+    margin: 5px 0 0;
+    font-size: 14px;
 }
 
 /* TITLE */
@@ -54,33 +54,33 @@ body {
 .section-title {
     background: #d9eaf7;
     color: #111;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
-    padding: 12px;
+    padding: 9px;
     border-bottom: 2px solid #1f4e78;
 }
 
 /* TOP DETAILS */
 
 .top-details {
-    padding: 18px;
+    padding: 10px 14px;
 }
 
 .info-row {
     display: flex;
     border-bottom: 1px solid #ddd;
-    padding: 11px 5px;
+    padding: 7px 3px;
 }
 
 .label {
-    width: 35%;
+    width: 32%;
     font-weight: bold;
     color: #444;
 }
 
 .value {
-    width: 65%;
+    width: 68%;
     font-weight: 600;
     word-break: break-word;
 }
@@ -89,30 +89,68 @@ body {
 
 .table-wrap {
     width: 100%;
-    padding: 0 18px 20px 18px;
+    padding: 5px 10px 15px 10px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
 }
 
 th {
     background: #d9eaf7;
     color: #111;
-    padding: 11px 8px;
-    border: 1px solid #bbb;
+    padding: 7px 3px;
+    border: 1px solid #aaa;
     text-align: center;
+    font-size: 13px;
+    line-height: 1.2;
 }
 
 td {
-    padding: 10px 8px;
-    border: 1px solid #ddd;
+    padding: 7px 3px;
+    border: 1px solid #ccc;
     text-align: center;
+    font-size: 13px;
+    word-break: break-word;
+    overflow-wrap: anywhere;
 }
 
 td.item-name {
     text-align: left;
+}
+
+/* COLUMN WIDTHS */
+
+th:nth-child(1),
+td:nth-child(1) {
+    width: 15%;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 25%;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+    width: 11%;
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+    width: 11%;
+}
+
+th:nth-child(5),
+td:nth-child(5) {
+    width: 19%;
+}
+
+th:nth-child(6),
+td:nth-child(6) {
+    width: 19%;
 }
 
 /* MTC LINK */
@@ -127,154 +165,100 @@ a.mtc-link {
 
 .footer {
     text-align: center;
-    padding: 16px;
+    padding: 12px;
     background: #f5f5f5;
-    font-size: 13px;
+    font-size: 12px;
     color: #666;
 }
 
 
-/* =====================================================
-   MOBILE VIEW
-   ===================================================== */
+/* ==================================================
+   MOBILE - SAME LANDSCAPE TABLE
+   NO CARD VIEW / NO HORIZONTAL SCROLL
+   ================================================== */
 
 @media (max-width: 600px) {
 
     body {
-        padding: 8px;
+        padding: 3px;
     }
 
     .container {
-        margin: 5px auto;
-        border-radius: 8px;
+        width: 100%;
+        margin: 3px auto;
+        border-radius: 5px;
     }
 
     .header {
-        padding: 18px 10px;
+        padding: 10px 5px;
     }
 
     .header h1 {
-        font-size: 21px;
+        font-size: 18px;
     }
 
     .header p {
-        font-size: 13px;
+        font-size: 10px;
     }
 
     .section-title {
-        font-size: 18px;
-        padding: 10px;
+        font-size: 15px;
+        padding: 6px;
     }
 
-
-    /* TOP ASN DETAILS */
-
     .top-details {
-        padding: 12px;
+        padding: 5px 7px;
     }
 
     .info-row {
-        display: block;
-        padding: 9px 2px;
+        display: flex;
+        padding: 4px 2px;
+        font-size: 11px;
     }
 
     .label {
-        width: 100%;
-        font-size: 13px;
-        color: #666;
-        margin-bottom: 4px;
+        width: 35%;
     }
 
     .value {
-        width: 100%;
-        font-size: 15px;
-        color: #111;
+        width: 65%;
     }
-
-
-    /* TABLE -> MOBILE CARDS */
 
     .table-wrap {
-        padding: 5px 10px 15px 10px;
-    }
-
-    table,
-    tbody {
-        display: block;
         width: 100%;
-    }
-
-    thead {
-        display: none;
-    }
-
-    tr {
-        display: block;
-        width: 100%;
-        margin-bottom: 15px;
-        border: 1px solid #c9d6e2;
-        border-radius: 8px;
+        padding: 3px;
         overflow: hidden;
-        background: #fff;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     }
 
-    td {
-        display: flex;
+    table {
         width: 100%;
-        text-align: left;
-        border: none;
-        border-bottom: 1px solid #eee;
-        padding: 9px 10px;
-        font-size: 14px;
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+
+    th {
+        font-size: 8px;
+        padding: 4px 1px;
+        line-height: 1.1;
         word-break: break-word;
     }
 
-    td:last-child {
-        border-bottom: none;
+    td {
+        font-size: 8px;
+        padding: 4px 1px;
+        line-height: 1.15;
+        word-break: break-word;
+        overflow-wrap: anywhere;
     }
 
-    td::before {
-        width: 42%;
-        flex-shrink: 0;
-        font-weight: bold;
-        color: #555;
-        padding-right: 8px;
-    }
-
-    td:nth-child(1)::before {
-        content: "Travel Card";
-    }
-
-    td:nth-child(2)::before {
-        content: "Item Name";
-    }
-
-    td:nth-child(3)::before {
-        content: "MTC No";
-    }
-
-    td:nth-child(4)::before {
-        content: "Heat No";
-    }
-
-    td:nth-child(5)::before {
-        content: "CMN No";
-    }
-
-    td:nth-child(6)::before {
-        content: "RMN No";
-    }
-
-    td.item-name {
-        text-align: left;
+    a.mtc-link {
+        font-size: 8px;
     }
 
     .footer {
-        font-size: 12px;
-        padding: 14px 8px;
+        font-size: 9px;
+        padding: 7px 3px;
     }
-
 }
 
 </style>
@@ -292,7 +276,6 @@ a.mtc-link {
     <div class="section-title">
         ASN-Details
     </div>
-
 
     <div class="top-details">
 
@@ -313,13 +296,11 @@ a.mtc-link {
 
     </div>
 
-
     <div class="table-wrap">
 
         <table>
 
             <thead>
-
                 <tr>
                     <th>Travel Card No</th>
                     <th>Item Name</th>
@@ -328,7 +309,6 @@ a.mtc-link {
                     <th>CMN No</th>
                     <th>RMN No</th>
                 </tr>
-
             </thead>
 
             <tbody>
@@ -336,7 +316,7 @@ a.mtc-link {
                 <tr>
 <td>T-1056</td>
 <td class="item-name">MM EX 413001M-00 ENTRY COMPONENT</td>
-<td><a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-103-2.pdf" target="_blank" download>103</a></td>
+<td><strong>103</strong><br><a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-103-2.pdf" target="_blank">View</a> | <a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-103-2.pdf" download>Download</a></td>
 <td>2</td>
 <td>C26050401-01</td>
 <td>R260428-05</td>
@@ -344,7 +324,7 @@ a.mtc-link {
 <tr>
 <td>T-1030</td>
 <td class="item-name">MM EX 414002-00 MIDDLE NUT</td>
-<td><a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-103-2.pdf" target="_blank" download>103</a></td>
+<td><strong>103</strong><br><a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-103-2.pdf" target="_blank">View</a> | <a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-103-2.pdf" download>Download</a></td>
 <td>2</td>
 <td>C26042901-02</td>
 <td>R260428-04</td>
@@ -352,7 +332,7 @@ a.mtc-link {
 <tr>
 <td>T-1027</td>
 <td class="item-name">MM EX 414004-00 RING</td>
-<td><a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-103-2.pdf" target="_blank" download>103</a></td>
+<td><strong>103</strong><br><a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-103-2.pdf" target="_blank">View</a> | <a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-103-2.pdf" download>Download</a></td>
 <td>2</td>
 <td>C26050601-03</td>
 <td>R260428-01</td>
@@ -360,7 +340,7 @@ a.mtc-link {
 <tr>
 <td>T-1071</td>
 <td class="item-name">MM EX 413000-00 SEALING TUBE</td>
-<td><a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-103-2.pdf" target="_blank" download>103</a></td>
+<td><strong>103</strong><br><a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-103-2.pdf" target="_blank">View</a> | <a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-103-2.pdf" download>Download</a></td>
 <td>2</td>
 <td>C26051001-01</td>
 <td>R260428-01</td>
@@ -368,7 +348,7 @@ a.mtc-link {
 <tr>
 <td>T-1051</td>
 <td class="item-name">MM EX 414005-00 CONE</td>
-<td><a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-114-2.pdf" target="_blank" download>114</a></td>
+<td><strong>114</strong><br><a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-114-2.pdf" target="_blank">View</a> | <a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-114-2.pdf" download>Download</a></td>
 <td>2</td>
 <td>C26050301-02</td>
 <td>R260430-11</td>
@@ -376,7 +356,7 @@ a.mtc-link {
 <tr>
 <td>T-1036</td>
 <td class="item-name">MM EX 313003-00 BACK NUT</td>
-<td><a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-110-4.pdf" target="_blank" download>110</a></td>
+<td><strong>110</strong><br><a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-110-4.pdf" target="_blank">View</a> | <a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-110-4.pdf" download>Download</a></td>
 <td>4</td>
 <td>C26050301-06</td>
 <td>R260429-03</td>
@@ -388,7 +368,6 @@ a.mtc-link {
         </table>
 
     </div>
-
 
     <div class="footer">
         Metal Mech Engineering<br>
