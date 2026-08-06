@@ -38,21 +38,68 @@ body {
    HEADER
    ================================ */
 
-.header {
-    background: #1f4e78;
-    color: white;
-    text-align: center;
-    padding: 16px 10px;
+.header{
+
+    background:#1F4E78;
+    color:#fff;
+
+    display:flex;
+    align-items:center;
+
+    padding:18px;
+
 }
 
-.header h1 {
-    margin: 0;
-    font-size: 24px;
+.headerLeft{
+
+    width:95px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
 }
 
-.header p {
-    margin: 5px 0 0;
-    font-size: 14px;
+.headerRight{
+
+       flex:1;
+    text-align:center;
+    padding-right:120px;
+
+}
+
+.logo{
+
+    width:80px;
+
+    background:#fff;
+
+    padding:6px;
+
+    border-radius:8px;
+
+}
+
+.header h1{
+
+    font-size:30px;
+
+    white-space:nowrap;
+
+    line-height:1;
+
+}
+
+.header p{
+
+    font-size:15px;
+
+    white-space:nowrap;
+
+    line-height:1.1;
+
+    margin-top:4px;
+
 }
 
 
@@ -192,14 +239,47 @@ a.mtc-link:hover {
    FOOTER
    ================================ */
 
-.footer {
-    text-align: center;
-    padding: 12px;
-    background: #f5f5f5;
-    font-size: 12px;
-    color: #666;
+.footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#f5f5f5;
+
+    padding:12px;
+
+    font-size:12px;
+
+    color:#666;
+
 }
 
+.footerLeft{
+
+    width:30%;
+
+    text-align:left;
+
+}
+
+.footerCenter{
+
+    width:40%;
+
+    text-align:center;
+
+}
+
+.footerRight{
+
+    width:30%;
+
+    text-align:right;
+
+}
 
 /* ==================================================
    MOBILE - SAME LANDSCAPE TABLE
@@ -219,18 +299,59 @@ a.mtc-link:hover {
         border-radius: 5px;
     }
 
+    .headerLeft{
+
+    width:75px;
+
+}
+
+.headerRight{
+
+    flex:1;
+
+    text-align:left;
+
+    padding-left:10px;
+
+    padding-right:0;
+
+}
+
+.logo{
+
+    width:60px;
+
+}
+
+.header h1{
+
+    margin:0;
+
+    font-size:14px;
+
+    line-height:1.15;
+
+    white-space:nowrap;
+
+}
+
+.header p{
+
+    margin-top:3px;
+
+    font-size:8px;
+
+    line-height:1.15;
+
+    white-space:nowrap;
+
+}	
+
     .header {
         padding: 10px 5px;
     }
 
-    .header h1 {
-        font-size: 18px;
-    }
-
-    .header p {
-        font-size: 10px;
-    }
-
+   
     .section-title {
         font-size: 15px;
         padding: 6px;
@@ -285,10 +406,27 @@ a.mtc-link:hover {
         font-size: 8px;
     }
 
-    .footer {
-        font-size: 9px;
-        padding: 7px 3px;
-    }
+    .footer{
+
+    flex-direction:column;
+
+    gap:12px;
+
+    font-size:9px;
+
+    padding:7px 3px;
+
+}
+
+.footerLeft,
+.footerCenter,
+.footerRight{
+
+    width:100%;
+
+    text-align:center;
+
+}
 }
 
 </style>
@@ -306,7 +444,17 @@ a.mtc-link:hover {
          HEADER
          ================================ -->
 
-    <div class="header">
+   <div class="header">
+
+    <div class="headerLeft">
+
+        <img src="https://raw.githubusercontent.com/jitusakhra-art/Logo/main/company_logo.png.png"
+             class="logo"
+             alt="MetalMech Engineering">
+
+    </div>
+
+    <div class="headerRight">
 
         <h1>Metal Mech Engineering</h1>
 
@@ -315,6 +463,8 @@ a.mtc-link:hover {
         </p>
 
     </div>
+
+</div>
 
 
     <!-- ================================
@@ -515,16 +665,31 @@ a.mtc-link:hover {
          FOOTER
          ================================ -->
 
-    <div class="footer">
+   <div class="footer">
 
-        Metal Mech Engineering
+    <div class="footerLeft">
 
-        <br>
+        <b>Prepared By</b><br>
+
+        Jitu Gadhvi
+
+    </div>
+
+    <div class="footerCenter">
+
+        <b>Metal Mech Engineering</b><br>
 
         Material Traceability System
 
     </div>
 
+    <div class="footerRight">
+
+        <b>Approved By</b><br>
+
+        ABC XYZ
+
+    </div>
 
 </div>
 
