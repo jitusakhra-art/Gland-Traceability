@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Metal Mech Engineering - ASN Details</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f4f7;
+    color: #222;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 15px auto;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+}
+
+
+/* ================================
+   HEADER
+   ================================ */
+
+.header{
+
+    background:#1F4E78;
+    color:#fff;
+
+    display:flex;
+    align-items:center;
+
+    padding:18px;
+
+}
+
+.headerLeft{
+
+    width:95px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.headerRight{
+
+       flex:1;
+    text-align:center;
+    padding-right:120px;
+
+}
+
+.logo{
+
+    width:80px;
+
+    background:#fff;
+
+    padding:6px;
+
+    border-radius:8px;
+
+}
+
+.header h1{
+
+    font-size:30px;
+
+    white-space:nowrap;
+
+    line-height:1;
+
+}
+
+.header p{
+
+    font-size:15px;
+
+    white-space:nowrap;
+
+    line-height:1.1;
+
+    margin-top:4px;
+
+}
+
+
+/* ================================
+   TITLE
+   ================================ */
+
+.section-title {
+    background: #d9eaf7;
+    color: #111;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 9px;
+    border-bottom: 2px solid #1f4e78;
+}
+
+
+/* ================================
+   TOP DETAILS
+   ================================ */
+
+.top-details {
+    padding: 10px 14px;
+}
+
+.info-row {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    padding: 7px 3px;
+}
+
+.label {
+    width: 32%;
+    font-weight: bold;
+    color: #444;
+}
+
+.value {
+    width: 68%;
+    font-weight: 600;
+    word-break: break-word;
+}
+
+
+/* ================================
+   TABLE
+   ================================ */
+
+.table-wrap {
+    width: 100%;
+    padding: 5px 10px 15px 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th {
+    background: #d9eaf7;
+    color: #111;
+    padding: 7px 3px;
+    border: 1px solid #aaa;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.2;
+}
+
+td {
+    padding: 7px 3px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 13px;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+td.item-name {
+    text-align: left;
+}
+
+
+/* ================================
+   COLUMN WIDTHS
+   ================================ */
+
+th:nth-child(1),
+td:nth-child(1) {
+    width: 15%;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 25%;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+    width: 11%;
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+    width: 11%;
+}
+
+th:nth-child(5),
+td:nth-child(5) {
+    width: 19%;
+}
+
+th:nth-child(6),
+td:nth-child(6) {
+    width: 19%;
+}
+
+
+/* ================================
+   MTC / REPORT LINKS
+   ================================ */
+
+a.mtc-link {
+    color: #0563c1;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+a.mtc-link:hover {
+    color: #003f7f;
+}
+
+
+/* ================================
+   FOOTER
+   ================================ */
+
+.footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#f5f5f5;
+
+    padding:12px;
+
+    font-size:12px;
+
+    color:#666;
+
+}
+
+.footerLeft{
+
+    width:30%;
+
+    text-align:left;
+
+}
+
+.footerCenter{
+
+    width:40%;
+
+    text-align:center;
+
+}
+
+.footerRight{
+
+    width:30%;
+
+    text-align:right;
+
+}
+
+/* ==================================================
+   MOBILE - SAME LANDSCAPE TABLE
+   NO CARD VIEW
+   NO HORIZONTAL SCROLL
+   ================================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 3px;
+    }
+
+    .container {
+        width: 100%;
+        margin: 3px auto;
+        border-radius: 5px;
+    }
+
+    .headerLeft{
+
+    width:75px;
+
+}
+
+.headerRight{
+
+    flex:1;
+
+    text-align:left;
+
+    padding-left:10px;
+
+    padding-right:0;
+
+}
+
+.logo{
+
+    width:60px;
+
+}
+
+.header h1{
+
+    margin:0;
+
+    font-size:14px;
+
+    line-height:1.15;
+
+    white-space:nowrap;
+
+}
+
+.header p{
+
+    margin-top:3px;
+
+    font-size:8px;
+
+    line-height:1.15;
+
+    white-space:nowrap;
+
+}	
+
+    .header {
+        padding: 10px 5px;
+    }
+
+   
+    .section-title {
+        font-size: 15px;
+        padding: 6px;
+    }
+
+    .top-details {
+        padding: 5px 7px;
+    }
+
+    .info-row {
+        display: flex;
+        padding: 4px 2px;
+        font-size: 11px;
+    }
+
+    .label {
+        width: 35%;
+    }
+
+    .value {
+        width: 65%;
+    }
+
+    .table-wrap {
+        width: 100%;
+        padding: 3px;
+        overflow: hidden;
+    }
+
+    table {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+
+    th {
+        font-size: 8px;
+        padding: 4px 1px;
+        line-height: 1.1;
+        word-break: break-word;
+    }
+
+    td {
+        font-size: 8px;
+        padding: 4px 1px;
+        line-height: 1.15;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+    }
+
+    a.mtc-link {
+        font-size: 8px;
+    }
+
+    .footer{
+
+    flex-direction:column;
+
+    gap:12px;
+
+    font-size:9px;
+
+    padding:7px 3px;
+
+}
+
+.footerLeft,
+.footerCenter,
+.footerRight{
+
+    width:100%;
+
+    text-align:center;
+
+}
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- ================================
+         HEADER
+         ================================ -->
+
+   <div class="header">
+
+    <div class="headerLeft">
+
+        <img src="https://raw.githubusercontent.com/jitusakhra-art/Logo/main/company_logo.png.png"
+             class="logo"
+             alt="MetalMech Engineering">
+
+    </div>
+
+    <div class="headerRight">
+
+        <h1>Metal Mech Engineering</h1>
+
+        <p>
+            Material Traceability Details / Documents
+        </p>
+
+    </div>
+
+</div>
+
+
+    <!-- ================================
+         ASN TITLE
+         ================================ -->
+
+    <div class="section-title">
+
+        ASN-Details
+
+    </div>
+
+
+    <!-- ================================
+         ASN TOP DETAILS
+         ================================ -->
+
+    <div class="top-details">
+
+
+        <!-- ASSEMBLY NO -->
+
+        <div class="info-row">
+
+            <div class="label">
+                Assembly No
+            </div>
+
+            <div class="value">
+                AEX260721-05
+            </div>
+
+        </div>
+
+
+        <!-- GLAND CODE -->
+
+        <div class="info-row">
+
+            <div class="label">
+                Gland Code
+            </div>
+
+            <div class="value">
+                MM EX E1FUNV 32
+            </div>
+
+        </div>
+
+
+        <!-- WORK ORDER -->
+
+        <div class="info-row">
+
+            <div class="label">
+                Work Order No
+            </div>
+
+            <div class="value">
+                26000162
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             FINAL INSPECTION REPORT
+             ===================================== -->
+
+        <div class="info-row">
+
+            <div class="label">
+                Final Inspection Report
+            </div>
+
+            <div class="value">
+
+                <a href=""
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="mtc-link">
+                    OPEN REPORT
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- ================================
+         MATERIAL TABLE
+         ================================ -->
+
+    <div class="table-wrap">
+
+
+        <table id="materialTable">
+
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Travel Card No
+                    </th>
+
+                    <th>
+                        Item Name
+                    </th>
+
+                    <th>
+                        MTC No
+                    </th>
+
+                    <th>
+                        Heat No
+                    </th>
+
+                    <th>
+                        CMN No
+                    </th>
+
+                    <th>
+                        RMN No
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                <tr>
+<td>T-1157</td>
+<td class="item-name">MM EX 313001M-03 ENTRY COMPONENT</td>
+<td><strong>430</strong><br><a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-430-1.pdf" target="_blank">View</a> | <a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-430-1.pdf" download>Download</a></td>
+<td>1</td>
+<td>C26062701-03</td>
+<td>R260625-06</td>
+</tr>
+<tr>
+<td>T-1181</td>
+<td class="item-name">MM EX 313002-03 MIDDLE BODY</td>
+<td><strong>500</strong><br><a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-500-3.pdf" target="_blank">View</a> | <a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-500-3.pdf" download>Download</a></td>
+<td>3</td>
+<td>C26071901-01</td>
+<td>R260704-01</td>
+</tr>
+<tr>
+<td>T-1168</td>
+<td class="item-name">MM EX 313002U-03 INTEMEDIATE BODY</td>
+<td><strong>471</strong><br><a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-471-3.pdf" target="_blank">View</a> | <a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-471-3.pdf" download>Download</a></td>
+<td>3</td>
+<td>C26070101-03</td>
+<td>R260630-01</td>
+</tr>
+<tr>
+<td>T-1086</td>
+<td class="item-name">MM EX 313003-03 BACK NUT</td>
+<td><strong>219</strong><br><a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-219-4.pdf" target="_blank">View</a> | <a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-219-4.pdf" download>Download</a></td>
+<td>4</td>
+<td>C26060301-02</td>
+<td>R260517-04</td>
+</tr>
+<tr>
+<td>T-511</td>
+<td class="item-name">MM EX 313004-03 RING</td>
+<td><strong>116</strong><br><a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-116-4.pdf" target="_blank">View</a> | <a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-116-4.pdf" download>Download</a></td>
+<td>4</td>
+<td>C25080701-01</td>
+<td>R250426-01</td>
+</tr>
+<tr>
+<td>T-1073</td>
+<td class="item-name">MM EX 313005-03 UNIVERSAL CONE</td>
+<td><strong>206</strong><br><a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-206-3.pdf" target="_blank">View</a> | <a class="mtc-link" href="https://jitusakhra-art.github.io/Traceability/MTC-206-3.pdf" download>Download</a></td>
+<td>3</td>
+<td>C26052001-04</td>
+<td>R260512-01</td>
+</tr>
+
+
+            </tbody>
+
+
+        </table>
+
+
+    </div>
+
+
+    <!-- ================================
+         FOOTER
+         ================================ -->
+
+   <div class="footer">
+
+    <div class="footerLeft">
+
+        <b>Prepared By</b><br>
+
+        Jitu Gadhvi
+
+    </div>
+
+    <div class="footerCenter">
+
+        <b>Metal Mech Engineering</b><br>
+
+        Material Traceability System
+
+    </div>
+
+    <div class="footerRight">
+
+        <b>Approved By</b><br>
+
+        Jitu Gadhvi
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================================
+     MTC PDF LINK SYSTEM
+
+     Example:
+
+     MTC No  = 103
+     Heat No = 2
+
+     PDF FILE:
+     MTC-103-2.pdf
+
+     MTC column will show ONLY:
+     103
+
+     Click 103 -> PDF opens
+     ================================================== -->
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    const table =
+        document.getElementById("materialTable");
+
+
+    if (!table) {
+        return;
+    }
+
+
+    const rows =
+        table.querySelectorAll("tbody tr");
+
+
+    rows.forEach(function (row) {
+
+
+        const cells =
+            row.querySelectorAll("td");
+
+
+        if (cells.length < 6) {
+            return;
+        }
+
+
+        /* ================================
+           GET MTC CELL
+           ================================ */
+
+        const mtcCell = cells[2];
+
+
+        /* ================================
+           GET HEAT CELL
+           ================================ */
+
+        const heatCell = cells[3];
+
+
+        /* ================================
+           READ MTC NUMBER
+
+           Existing cell may contain:
+
+           103
+           103View
+           103View | Download
+
+           We only need 103
+           ================================ */
+
+        const rawText =
+            mtcCell.textContent.trim();
+
+
+        let mtcNo = "";
+
+
+        /*
+        First try to read first number
+        from the MTC cell.
+        */
+
+        const numberMatch =
+            rawText.match(/\d+/);
+
+
+        if (numberMatch) {
+
+            mtcNo =
+                numberMatch[0];
+
+        }
+
+
+        /* ================================
+           READ HEAT NUMBER
+           ================================ */
+
+        const heatNo =
+            heatCell.textContent.trim();
+
+
+        /* ================================
+           CHECK DATA
+           ================================ */
+
+        if (
+            mtcNo === "" ||
+            heatNo === ""
+        ) {
+
+            return;
+
+        }
+
+
+        /* ================================
+           CREATE PDF FILE NAME
+
+           Example:
+
+           MTC-103-2.pdf
+           ================================ */
+
+        const pdfFile =
+
+            "MTC-" +
+
+            encodeURIComponent(mtcNo) +
+
+            "-" +
+
+            encodeURIComponent(heatNo) +
+
+            ".pdf";
+
+
+        /* ================================
+           MTC PDF LOCATION
+           ================================ */
+
+        const pdfURL =
+
+            "https://jitusakhra-art.github.io/Traceability/" +
+
+            pdfFile;
+
+
+        /* ================================
+           REMOVE OLD CONTENT
+
+           This removes:
+
+           View
+           Download
+           old links
+
+           EVERYTHING from MTC cell.
+           ================================ */
+
+        mtcCell.innerHTML = "";
+
+
+        /* ================================
+           CREATE NEW MTC LINK
+           ================================ */
+
+        const link =
+            document.createElement("a");
+
+
+        link.href =
+            pdfURL;
+
+
+        /*
+        Open PDF in browser/new tab.
+        NO forced download.
+        */
+
+        link.target =
+            "_blank";
+
+
+        link.rel =
+            "noopener noreferrer";
+
+
+        link.className =
+            "mtc-link";
+
+
+        /*
+        Show ONLY MTC No.
+
+        Example:
+
+        103
+        */
+
+        link.textContent =
+            mtcNo;
+
+
+        /* ================================
+           ADD LINK TO MTC CELL
+           ================================ */
+
+        mtcCell.appendChild(link);
+
+
+    });
+
+
+});
+
+</script>
+
+
+</body>
+
+</html>
